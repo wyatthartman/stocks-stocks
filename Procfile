@@ -1,0 +1,1 @@
+web: gunicorn static_stock:app --log-file=-

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+
+<link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bokeh/2.3.2/bokeh.min.css"
+    rel="stylesheet" type="text/css">
+<link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bokeh/2.3.2/bokeh-widgets.css"
+    rel="stylesheet" type="text/css">
+<link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bokeh/2.3.2/bokeh-tables.css"
+    rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1> Stock daily closing price: {{title}} </h1>
+        <b3> Use built in chart sidebar tools to zoom with a box or mouse wheel, or to shift or reset the plot.</br>
+             You can also select a maximum number of years to display with the select buttons. </b3>
+
+
+        <h4> Add stock quote to 'Next ticker' and hit [ go !] to see the chart! </h4>
+        <b3 style="color:red"><b>{{error_msg}}</b>{{error_detail}}</b3> 
+
+
+        <form id='userinfoform_stock' method='post' placeholder=QQQ action='stock_prices' >
+            <p>
+        Next ticker: <input type='text' name='ticker' />
+         <input type='submit' value='go !' />
+            </p>
+             <p>
+        Max years shown  1: <input type='radio' name='years' value=1 /> 
+        2: <input type='radio' name='years' checked="checked" value=2 />
+        5: <input type='radio' name='years' value=5 />  
+        10: <input type='radio' name='years' value=10 />  
+        20: <input type='radio' name='years' value=20 />  
+            </p>
+
+
+        </form>
+
+        {{ div|safe }}
+        {{ script|safe }}
+            <p>
+            <p>
+        <b3> Page starts with QQQ, a NASDAQ ETF.  Ticker errors return to QQQ as a default value.</br>
+             Plot built using the AlphaVantage API, Bokeh, and Flask.  You should really just use TradingView.</b3>
+
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bokeh/2.3.2/bokeh.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bokeh/2.3.2/bokeh-widgets.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bokeh/2.3.2/bokeh-tables.js"></script>
+</html>
