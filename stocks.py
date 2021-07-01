@@ -73,7 +73,7 @@ def line_plot(df, ticker):
 app.vars = {}
 app.vars['ncycles'] = 0     # track n page cycles
 
-@app.route('/stock_prices', methods = ['GET', 'POST'])
+@app.route('/', methods = ['GET', 'POST'])
 
 def stock():  
       
@@ -126,7 +126,7 @@ def stock():
         app.vars['ncycles'] += 1
         app.vars['ticker'] = request.form['ticker']
         app.vars['years'] = request.form['years']        
-        return redirect('/stock_prices')
+        return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True)
