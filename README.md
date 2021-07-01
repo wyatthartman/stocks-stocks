@@ -3,7 +3,7 @@ This learning project creates a simple (unattractive) python web app to generate
 
 The deployed application ['stock-stock-stock'](https://stock-stock-stock.herokuapp.com/) can be viewed and used on [Heroku](http://heroku.com/).
 
-If you were looking for a fully featured site to plot stock price movements this is not it.[TradingView](https://www.tradingview.com/) is popular and has many good features.
+If you were looking for a fully featured site to plot stock price movements this is not it. [TradingView](https://www.tradingview.com/) is popular and has many good features.
 
 
 #### limitations / caveats
